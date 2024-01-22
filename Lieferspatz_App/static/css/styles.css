@@ -1,0 +1,73 @@
+body {
+    background-color: blanchedalmond;
+    font-family: ArialRoboto, sans-serif;
+    margin: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header img {
+    max-width: 300px; /* Anpassen, um die Größe des Logos zu steuern */
+}
+
+.restaurant-box {
+    border: 2px solid darkolivegreen;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: white;
+}
+
+.button {
+    background-color: forestgreen;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.menu-item-box {
+    border: 2px solid darkolivegreen;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: white;
+}
+
+.menu-item-box p {
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.menu-item-box .description {
+    font-size: 12px;
+}
+
+.menu-item-box .checkbox {
+    float: right;
+    margin-top: -20px;
+}
+
+#cart-button {
+    background-color: forestgreen;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    margin: 20px auto;
+    cursor: pointer;
+}

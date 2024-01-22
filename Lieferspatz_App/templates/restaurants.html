@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurants in der Nähe</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="{{ url_for('static', filename='Lieferspatz_Logo.svg') }}" alt="Logo">
+            <h1>Restaurants in Ihrer Nähe</h1>
+        </header>
+
+        {% for restaurant in restaurant_data %}
+        <div class="restaurant-box">
+            <p>{{ restaurant[1] }}</p>
+            <p>{{ restaurant[2] }}</p>
+            <a href="{{ url_for('menu', restaurant_id=restaurant[0])}}" class="button">Speisekarte</a>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
