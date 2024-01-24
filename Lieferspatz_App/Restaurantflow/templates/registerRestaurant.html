@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')}}">
+    <title>Lieferspatz - Geschäftskonto erstellen</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="{{ url_for('static', filename='Lieferspatz_Logo.svg')}}" alt="Lieferspatz Logo" class="center"/>  
+            <br>
+            <h1>LIEFERSPATZ</h1>
+        </header>
+        <section class="content">
+            <h2>Geschäftskonto erstellen</h2>
+            <form action="registerRestaurant" method="post">
+                <label for="restaurantName">Name:</label>
+                <input type="text" id="restaurantName" name="restaurantName" required>
+
+                <label for="address">Adresse:</label>
+                <input type="text" id="address" name="address" required>
+
+                <label for="zipCode">Postleitzahl:</label>
+                <input type="text" id="zipCode" name="zipCode" required>
+
+                <label for="servedArea">Liefergebiet: Postleitzahlen getrennt durch Komma eingeben (z.B. 47119, 47219)</label> 
+                <input type="text" id="servedArea" name="servedArea" required>
+
+                <label for="openFrom">Geöffnet ab: (z.B. 12:30)</label>
+                <input type="text" id="openFrom" name="openFrom" required>
+
+                <label for="openUntil">Geöffnet bis: (z.B. 12:30)</label>
+                <input type="text" id="openUntil" name="openUntil" required>
+
+                <label for="description">Beschreibung:</label>
+                <input type="text" id="descrition" name="description" required>
+
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="password">Passwort:</label>
+                <input type="password" id="password" name="password" required>
+
+                <input type="submit" value="Erstellen" id="registerRestaurant">
+            
+            </form>
+        </section>
+    </div>
+    
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

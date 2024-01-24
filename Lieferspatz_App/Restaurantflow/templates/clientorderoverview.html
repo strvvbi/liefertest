@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bestellübersicht</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <img src="{{ url_for('static', filename='Lieferspatz_Logo.svg') }}" alt="Logo">
+        <h1 class="center-text">Bestellübersicht</h1>
+
+        <table class="order-table">
+            <thead>
+                <tr>
+                    <th>Bestell-ID</th>
+                    <th>Restaurant</th>
+                    <th>Datum</th>
+                    <th>Uhrzeit</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for order in order_data %}
+                <tr>
+                    <td>{{ order[0] }}</td>
+                    <td>{{ order[1] }}</td>
+                    <td>{{ order[2] }}</td>
+                    <td>{{ order[3] }}</td>
+                    <td>{{ order[4] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <form method="get" action="{{ url_for('restaurants') }}">
+            <button class="action-btn centered-button" type="submit" name="newOrderBtn" value="Neue Bestellung aufgeben">Neue Bestellung aufgeben</button>
+        </form>
+        <form method="get" action="{{ url_for('index') }}">
+            <button class="logout-btn centered-button" type="submit" name="logoutBtn" value="Logout">Logout</button>
+        </form>
+    </div>
+</body>
+</html>
+

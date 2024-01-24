@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')}}">
+    <title>Lieferspatz - mit Geschäftskonto anmelden</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="{{ url_for('static', filename='Lieferspatz_Logo.svg')}}" alt="Lieferspatz Logo" class="center"/>  
+            <br>
+            <h1>LIEFERSPATZ</h1>
+        </header>
+        <section class="content">
+            <h2>Mit Geschäftskonto anmelden</h2>
+            <form action="loginRestaurant" method="post">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="password">Passwort:</label>
+                <input type="password" id="password" name="password" required>
+
+                <input type="submit" value="Anmelden" id="loginRestaurant">
+            
+            </form>
+        </section>
+    </div>
+    
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

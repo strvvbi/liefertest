@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')}}">
+    <title>Lieferspatz - Kundenkonto erstellen</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="{{ url_for('static', filename='Lieferspatz_Logo.svg')}}" alt="Lieferspatz Logo" class="center"/>  
+            <br>
+            <h1>LIEFERSPATZ</h1>
+        </header>
+        <section class="content">
+            <h2>Kundenkonto erstellen</h2>
+            <form action="registerClient" method="post">
+                <label for="firstName">Vorname:</label>
+                <input type="text" id="firstName" name="firstName" required>
+
+                <label for="lastName">Nachname:</label>
+                <input type="text" id="lastName" name="lastName" required>
+
+                <label for="address">Adresse:</label>
+                <input type="text" id="address" name="address" required>
+
+                <label for="zipCode">Postleitzahl:</label>
+                <input type="text" id="zipCode" name="zipCode" required>
+
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="password">Passwort:</label>
+                <input type="password" id="password" name="password" required>
+
+                <input type="submit" value="Erstellen" id="registerClient">
+            </form>
+        </section>
+    </div>
+    
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

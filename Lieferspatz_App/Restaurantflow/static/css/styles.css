@@ -1,0 +1,212 @@
+body {
+    background-color: blanchedalmond;
+    font-family: ArialRoboto, sans-serif;
+    margin: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header img {
+    max-width: 300px; 
+}
+
+.restaurant-box {
+    border: 2px solid darkolivegreen;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: white;
+}
+
+.button {
+    background-color: darkolivegreen;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.category-heading {
+    color: darkolivegreen;
+}
+
+.category-divider {
+    border-top: 2px solid darkolivegreen;
+    margin: 10px 0;
+}
+
+.category-container {
+    margin-bottom: 20px;
+}
+
+.menu-item-box {
+    border: 2px solid darkolivegreen;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: white;
+    margin-bottom: 10px;
+}
+
+.menu-item-box p {
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.menu-item-box .description {
+    font-size: 12px;
+}
+
+.menu-item-box .checkbox {
+    float: right;
+    margin-top: -20px;
+}
+
+.bold-green-line {
+    border-top: 4px solid darkolivegreen; 
+    margin: 10px 0;
+}
+
+.smaller-bold-text {
+    font-weight: bold;
+    font-size: smaller; 
+}
+
+.centered-form {
+    text-align: center;
+}
+
+.dark-green-button {
+    background-color: darkolivegreen;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    margin: 20px auto;
+    cursor: pointer;
+}
+
+.comment-form {
+    text-align: left; 
+}
+
+.comment-label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.submit-order-button-container {
+    text-align: center; 
+    margin-top: 10px;   
+}
+
+
+#cart-button {
+    background-color: darkolivegreen;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    margin: 20px auto;
+    cursor: pointer;
+}
+
+.clientorderoverview {
+    text-align: center;
+}
+
+.order-box {
+    border: 2px solid darkolivegreen;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: white;
+    width: 70%; 
+    margin: 0 auto; 
+}
+
+.order-box p {
+    margin: 5px 0;
+}
+
+.confirmation {
+    text-align: center;
+}
+
+.confirmation-text {
+    font-weight: bold;
+}
+
+.centered-button {
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.btn-order-overview {
+    background-color: darkolivegreen;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.order-table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+.order-table th, .order-table td {
+    border: 1px solid darkolivegreen;
+    padding: 10px;
+    text-align: center;
+}
+
+.order-table th {
+    background-color: darkolivegreen;
+    color: white;
+}
+
+
+.logout-btn {
+        background-color: darkolivegreen;
+        color: white;
+        padding: 10px 20px;
+        margin-top: 10px;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px; }
+
+.action-btn {
+        background-color: darkolivegreen;
+        color: white;
+        padding: 10px 20px;
+        margin-top: 10px;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px;
+    }
+    

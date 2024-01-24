@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speisekarte</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="{{ url_for('static', filename='Lieferspatz_Logo.svg') }}" alt="Logo">
+            <h1 id="restaurant-name">{{ restaurant_name }}</h1>
+            <h2>Speisekarte</h2>
+        </header>
+
+        <form method="post" action="{{ url_for('add_to_cart') }}">
+            <input type="hidden" name="restaurant_id" value="{{ restaurant_id }}">
+            
+    {% for category, items in categories %}
+        <h3 class="category-heading">{{ category }}</h3>
+        <div class="category-container">
+            {% for item in items %}
+                <div class="menu-item-box">
+                    <p>{{ item[2] }} - {{ item[3] }} €</p>
+                    <p class="description">{{ item[4] }}</p>
+                    <label for="quantity{{ item[0] }}">Menge:</label>
+                    <input type="number" name="quantity{{ item[0] }}" id="quantity{{ item[0] }}" value="0" min="0">
+                    <input type="hidden" name="item_id{{ item[0] }}" value="{{ item[0] }}">
+                </div>
+            {% endfor %}
+        </div>
+    {% endfor %}
+            
+            <button type="submit" id="cart-button">Zum Warenkorb</button>
+        </form>
+    </div>
+</body>
+</html>

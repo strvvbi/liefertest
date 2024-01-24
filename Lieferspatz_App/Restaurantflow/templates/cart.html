@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warenkorb</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="{{ url_for('static', filename='Lieferspatz_Logo.svg') }}" alt="Logo">
+            <h1 id="restaurant-name">{{ restaurant_name }}</h1>
+            <h2>Warenkorb</h2>
+        </header>
+
+        {% for item in selected_items %}
+        <div class="menu-item-box">
+            <p>{{ item['name'] }} - {{ item['price'] }} €</p>
+            <p>Menge: {{ item['quantity'] }}</p>
+            
+            <form method="post" action="{{ url_for('update_cart') }}">
+                <input type="hidden" name="item_id" value="{{ item['item_id'] }}">
+                <button type="submit" name="action" value="increase">+</button>
+                <button type="submit" name="action" value="decrease">-</button>
+                <button type="submit" name="action" value="remove">Entfernen</button>
+            </form>
+        </div>
+        {% endfor %}
+        <hr class="bold-green-line">
+
+        <div class="total-price">
+            <p class="total-label">Gesamtpreis</p>
+            <p class="total-value"><strong>{{ total_price }} €</strong></p>
+        </div>
+        <form method="post" action="{{ url_for('submit_order') }}" class="comment-form"> 
+            <label for="order-comment" class="comment-label">Kommentar zur Bestellung (optional):</label> 
+            <textarea name="order_comment" id="order-comment" rows="4" cols="50"></textarea>
+            <div class="submit-order-button-container"></div>
+                <button type="submit" id="submit-order-button" class="dark-green-button centered-button">Bestellung abschicken</button> 
+            </div>
+        </form>
+</body>
+</html>
